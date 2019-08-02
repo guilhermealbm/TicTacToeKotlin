@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun restart(view:View){
+        val btnSelected = view as Button
+        btnSelected.text = "Restart"
         board = charArrayOf(' ',' ',' ',' ',' ',' ',' ',' ',' ')
         turnIndex = 0
         btn.text = ""
@@ -64,6 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     var board: CharArray = charArrayOf(' ',' ',' ',' ',' ',' ',' ',' ',' ')
+    var scores: IntArray = intArrayOf(0, 0)
     var winningSequences = ArrayList<IntArray>()
 
     var turnIndex = 0
@@ -105,8 +108,26 @@ class MainActivity : AppCompatActivity() {
                 board[(winningSequences[i][1]-1)] == symbol &&
                 board[(winningSequences[i][2]-1)] == symbol){
                 Toast.makeText(this," Player " +(turnIndex+1)+ " win the game", Toast.LENGTH_LONG).show()
+                scores[turnIndex] += 1
+                if(turnIndex == 0)
+                    player1Score.text = "Player 1 Score \n " + scores[turnIndex]
+                else
+                    player2Score.text = "Player 2 Score \n " + scores[turnIndex]
+                disableAllButtons()
             }
         }
+    }
+
+    private fun disableAllButtons(){
+        btn.isEnabled = false
+        btn2.isEnabled = false
+        btn3.isEnabled = false
+        btn4.isEnabled = false
+        btn5.isEnabled = false
+        btn6.isEnabled = false
+        btn7.isEnabled = false
+        btn8.isEnabled = false
+        btn9.isEnabled = false
     }
 
 }
