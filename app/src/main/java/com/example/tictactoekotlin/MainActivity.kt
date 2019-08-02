@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun btnClick(view:View){
+        if(winningSequences.size == 0)
+            initWinningSequences()
+
         val btnSelected = view as Button
         var cellID = 0;
 
@@ -31,6 +34,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         Toast.makeText(this, "Cell Id: " + cellID, Toast.LENGTH_LONG).show()
+        playGame(cellID,btnSelected)
 
     }
+
+    var board: CharArray = charArrayOf(' ',' ',' ',' ',' ',' ',' ',' ',' ')
+    var winningSequences = ArrayList<IntArray>()
+
+    var turnIndex = 1
+
+    private fun initWinningSequences(){
+        winningSequences.add(intArrayOf(1, 2, 3))
+        winningSequences.add(intArrayOf(4, 5, 6))
+        winningSequences.add(intArrayOf(7, 8, 9))
+
+        winningSequences.add(intArrayOf(1, 4, 7))
+        winningSequences.add(intArrayOf(2, 5, 8))
+        winningSequences.add(intArrayOf(3, 6, 9))
+
+        winningSequences.add(intArrayOf(1, 5, 9))
+        winningSequences.add(intArrayOf(3, 5, 7))
+    }
+
+    private fun playGame(cellID: Int, btnSelected: Button){
+        Toast.makeText(this, ""+ winningSequences.size, Toast.LENGTH_LONG).show()
+
+    }
+
 }
