@@ -6,12 +6,37 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+    fun restart(view:View){
+        board = charArrayOf(' ',' ',' ',' ',' ',' ',' ',' ',' ')
+        turnIndex = 0
+        btn.text = ""
+        btn.isEnabled = true
+        btn2.text = ""
+        btn2.isEnabled = true
+        btn3.text = ""
+        btn3.isEnabled = true
+        btn4.text = ""
+        btn4.isEnabled = true
+        btn5.text = ""
+        btn5.isEnabled = true
+        btn6.text = ""
+        btn6.isEnabled = true
+        btn7.text = ""
+        btn7.isEnabled = true
+        btn8.text = ""
+        btn8.isEnabled = true
+        btn9.text = ""
+        btn9.isEnabled = true
+
     }
 
     fun btnClick(view:View){

@@ -87,4 +87,17 @@
                 android:layout_height="40pt" android:id="@+id/btn9"
                 android:onClick="btnClick"/>
     </TableRow>
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="5pt">
+        <Button
+                android:text="Restart"
+                android:layout_margin="2pt"
+                android:textSize="5pt"
+                android:layout_width="40pt"
+                android:layout_height="25pt" android:id="@+id/btnRestart"
+                android:onClick="restart"/>
+    </TableRow>
 </TableLayout>
