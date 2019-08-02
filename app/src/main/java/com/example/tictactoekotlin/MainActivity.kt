@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             initWinningSequences()
 
         val btnSelected = view as Button
-        var cellID = 0;
+        var cellID = 0
 
         when(btnSelected.id){
             R.id.btn -> cellID = 1
@@ -61,15 +61,27 @@ class MainActivity : AppCompatActivity() {
             btnSelected.text = "X"
             btnSelected.setTextColor(Color.parseColor("#003366"))
             board.set((cellID-1), 'X')
+            checkWinningSequences('X')
         }else{
             btnSelected.text = "O"
             btnSelected.setTextColor(Color.parseColor("#993333"))
             board.set((cellID-1), 'O')
+            checkWinningSequences('O')
         }
 
         btnSelected.isEnabled = false
         turnIndex = if(turnIndex == 0) 1 else 0
 
+    }
+
+    private fun checkWinningSequences(symbol: Char){
+        for (i in 0..(winningSequences.size)-1){
+            if(board[(winningSequences[i][0]-1)] == symbol &&
+                board[(winningSequences[i][1]-1)] == symbol &&
+                board[(winningSequences[i][2]-1)] == symbol){
+                Toast.makeText(this," Player " +(turnIndex+1)+ " win the game", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
 }
