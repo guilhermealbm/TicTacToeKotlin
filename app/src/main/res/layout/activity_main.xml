@@ -16,18 +16,21 @@
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn"
                 android:onClick="btnClick"/>
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn2"
                 android:onClick="btnClick"/>
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn3"
                 android:onClick="btnClick"/>
@@ -39,18 +42,21 @@
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn4"
                 android:onClick="btnClick"/>
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn5"
                 android:onClick="btnClick"/>
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn6"
                 android:onClick="btnClick"/>
@@ -62,18 +68,21 @@
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn7"
                 android:onClick="btnClick"/>
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn8"
                 android:onClick="btnClick"/>
         <Button
                 android:text=""
                 android:layout_margin="2pt"
+                android:textSize="20pt"
                 android:layout_width="40pt"
                 android:layout_height="40pt" android:id="@+id/btn9"
                 android:onClick="btnClick"/>

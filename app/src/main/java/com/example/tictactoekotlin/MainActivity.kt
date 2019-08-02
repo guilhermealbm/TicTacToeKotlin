@@ -1,5 +1,6 @@
 package com.example.tictactoekotlin
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -33,7 +34,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        Toast.makeText(this, "Cell Id: " + cellID, Toast.LENGTH_LONG).show()
         playGame(cellID,btnSelected)
 
     }
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     var board: CharArray = charArrayOf(' ',' ',' ',' ',' ',' ',' ',' ',' ')
     var winningSequences = ArrayList<IntArray>()
 
-    var turnIndex = 1
+    var turnIndex = 0
 
     private fun initWinningSequences(){
         winningSequences.add(intArrayOf(1, 2, 3))
@@ -57,7 +57,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun playGame(cellID: Int, btnSelected: Button){
-        Toast.makeText(this, ""+ winningSequences.size, Toast.LENGTH_LONG).show()
+        if(turnIndex == 0){
+            btnSelected.text = "X"
+            btnSelected.setTextColor(Color.parseColor("#003366"))
+            board.set((cellID-1), 'X')
+        }else{
+            btnSelected.text = "O"
+            btnSelected.setTextColor(Color.parseColor("#993333"))
+            board.set((cellID-1), 'O')
+        }
+
+        btnSelected.isEnabled = false
+        turnIndex = if(turnIndex == 0) 1 else 0
 
     }
 
