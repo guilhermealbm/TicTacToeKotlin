@@ -116,6 +116,9 @@ class MainActivity : AppCompatActivity() {
                 disableAllButtons()
             }
         }
+        if(!(board.contains(' '))){
+            Toast.makeText(this,"Draw!", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun disableAllButtons(){
